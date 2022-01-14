@@ -21,10 +21,8 @@ let steps = [
     title: 'Install Tailwind CSS',
     body: () => (
       <p>
-        Install <code>tailwindcss</code> and its peer dependencies via npm, and then run the init
+        Install <code>tailwindcss</code>, its peer dependencies, and <code>concurrently</code> via npm, and then run the init
         command to generate both <code>tailwind.config.js</code> and <code>postcss.config.js</code>.
-        Additionally, we'll install <code>concurrently</code> to compile CSS alongside your JS
-        later.
       </p>
     ),
     code: {
@@ -58,9 +56,7 @@ let steps = [
     title: 'Update your package.json scripts',
     body: () => (
       <p>
-        We'll use the Tailwind CLI to compile styles. Update the scripts in{' '}
-        <code>package.json</code> to handle development and production building of your CSS. During
-        development and building this will produce a <code>app/styles/app.css</code> file.
+        Update the scripts in your <code>package.json</code> file to build both your development and production CSS.
       </p>
     ),
     code: {
@@ -93,14 +89,9 @@ let steps = [
   {
     title: 'Import the CSS file',
     body: () => (
-      <>
-        <p>
-          Import <code>./app/styles/app.css</code> in your <code>./app/root.jsx</code> file.
-        </p>
-        <p class="text-sm italic">
-          It's recommended to add <code>app/styles</code> to your .gitignore.
-        </p>
-      </>
+      <p>
+        Import the compiled <code>./app/styles/app.css</code> file in your <code>./app/root.jsx</code> file.
+      </p>
     ),
     code: {
       name: 'root.jsx',
